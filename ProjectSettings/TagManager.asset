@@ -11,12 +11,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Ground
+  - Victory
+  - Rain
+  - Electricity
+  - Heat
   - 
   - 
   - 
@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Raindrops
+    uniqueID: 680882171
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

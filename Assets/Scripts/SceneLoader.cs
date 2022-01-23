@@ -14,15 +14,9 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Settings");
     }
 
-    public void LoadFirstLevel()
+    public void LoadGame()
     {
-        SceneManager.LoadScene("Level1");
-    }
-
-    public void LoadNextLevel()
-    {
-        var currentIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentIndex + 1);
+        SceneManager.LoadScene("Game");
     }
 
     public void QuitGame()

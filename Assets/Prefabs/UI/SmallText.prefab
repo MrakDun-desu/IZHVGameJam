@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2713469357963019044, guid: 73c51586c2b6db94c8ca07b865ea913b, type: 3}
       propertyPath: m_fontSize
-      value: 40
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2713469357963019044, guid: 73c51586c2b6db94c8ca07b865ea913b, type: 3}
       propertyPath: m_fontSizeBase
-      value: 40
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2713469357963019044, guid: 73c51586c2b6db94c8ca07b865ea913b, type: 3}
       propertyPath: m_VerticalAlignment

@@ -1,27 +1,30 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class VolumeChanger : MonoBehaviour
 {
-    [SerializeField] int offset = 80;
-    [SerializeField] AudioMixer mixer;
-    [SerializeField] string parameterName;
-    [SerializeField] TextMeshProUGUI valueLabel;
-    [SerializeField] Slider slider;
+    [SerializeField] int _offset = 50;
+    [SerializeField] private int _multiplier = 2;
+    [SerializeField] AudioMixer _mixer;
+    [SerializeField] string _parameterName;
+    [SerializeField] TextMeshProUGUI _valueLabel;
+    [SerializeField] Slider _slider;
 
     private void OnValidate()
     {
-        if (valueLabel is null) return;
-        if (slider is null) return;
-        valueLabel.text = ((int)slider.value + offset).ToString();
+        if (_valueLabel is null) return;
+        if (_slider is null) return;
+        _mixer.GetFloat(_parameterName, out var sliderValue);
+        _slider.value = sliderValue;
+        _valueLabel.text = (((int)sliderValue + _offset) * _multiplier).ToString();
     }
 
     public void SetVolume(float value)
     {
-        mixer.SetFloat(parameterName, value);
-        valueLabel.text = ((int)value + offset).ToString();
+        _mixer.SetFloat(_parameterName, value);
+        _valueLabel.text = (((int)value + _offset) * _multiplier).ToString();
     }
 
 }
